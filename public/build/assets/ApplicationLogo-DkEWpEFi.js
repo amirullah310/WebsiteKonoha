@@ -1,0 +1,1 @@
+import{t as e}from"./app-BH_2bxtD.js";var t=e();function n(e){return(0,t.jsxs)(`div`,{...e,className:`font-accent text-xl font-extrabold flex items-center gap-1 ${e.className}`,children:[(0,t.jsx)(`span`,{className:`text-konoha-orange`,children:`Konoha`}),(0,t.jsx)(`span`,{className:`text-gray-600`,children:`Group`})]})}export{n as t};

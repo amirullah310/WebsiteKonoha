@@ -1,7 +1,23 @@
 import { defineConfig } from 'vite'
+import laravel from 'laravel-vite-plugin'
 import react from '@vitejs/plugin-react'
+import { fileURLToPath } from 'node:url'
+import { dirname, resolve } from 'node:path'
 
-// https://vite.dev/config/
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    laravel({
+      input: ['resources/css/app.css', 'resources/css/App.css', 'resources/js/app.tsx', 'resources/js/Pages/Welcome.tsx'],
+      refresh: true,
+    }),
+    react(),
+  ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'resources/js'),
+    },
+  },
 })

@@ -1,26 +1,36 @@
+import forms from '@tailwindcss/forms';
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        konoha: {
-          dark: '#121212',
-          light: '#1e1e1e',
-          orange: '#ff7b00',
-          red: '#c41e3a',
-          scroll: '#f5e6d3',
-          muted: '#a0a0a0',
-        }
-      },
-      fontFamily: {
-        main: ['"Plus Jakarta Sans"', 'sans-serif'],
-        accent: ['"Shippori Mincho"', 'serif'],
-      }
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.tsx',
+        './resources/js/**/*.jsx',
+    ],
+
+    theme: {
+        extend: {
+            colors: {
+                konoha: {
+                    orange: '#ff7b00',
+                    red: '#c41e3a',
+                    dark: '#121212',
+                    light: '#1a1a1a',
+                    muted: '#a0a0a0',
+                    scroll: '#e0e0e0',
+                },
+            },
+            fontFamily: {
+                sans: ['Plus Jakarta Sans', 'sans-serif'],
+                accent: ['Shippori Mincho', 'serif'],
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            },
+        },
     },
-  },
-  plugins: [],
-}
+
+    plugins: [forms],
+};
